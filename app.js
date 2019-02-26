@@ -143,6 +143,34 @@ console.log(wolf)
 wolf.shout()
 
 /*
+** OOP with ES6
+*/
+
+class Animal2 {
+	constructor(name, type) {
+		this.name = name;
+		this.type = type;
+	}
+
+	shout() {
+		console.log(this.name + ' is ' + this.sound + 'ing...');
+	}
+}
+
+class Wolf2 extends Animal2 {
+	constructor(name, type) {
+		super(name, type);
+		this.sound = "roar";
+	}
+}
+
+var wolf2 = new Wolf2("wolf", animalGroups.MAMMAL);
+
+console.log(wolf2)
+wolf2.shout()
+
+
+/*
 arr.reduce((accumulator,
            currentValue,
            currentIndex) => {
